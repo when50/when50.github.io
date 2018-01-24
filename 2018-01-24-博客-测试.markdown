@@ -1,8 +1,0 @@
----
-layout: post
-title:  "博客 测试"
-date:   2018-01-24 18:03:11 +0100
-thumbnail: earth.jpg
----
-
-这是一条测试的博客。

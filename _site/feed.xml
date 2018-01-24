@@ -4,11 +4,22 @@
     <title>When50's Blog</title>
     <description>85前互联网老兵，旅居厦门，现供职于美图，开发过数款iOS App。
 </description>
-    <link>http://localhost:4000/jekyll-theme-libretto/</link>
-    <atom:link href="http://localhost:4000/jekyll-theme-libretto/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Jan 2018 17:55:26 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Jan 2018 17:55:26 +0800</lastBuildDate>
+    <link>http://localhost:4000/blog/</link>
+    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 24 Jan 2018 18:42:57 +0800</pubDate>
+    <lastBuildDate>Wed, 24 Jan 2018 18:42:57 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>Mark一下blog开始发布</title>
+        <description>&lt;p&gt;Ha，终于搞定Jekyll和GitHub了，可以开始搞Blog拉，啦啦啦&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Jan 2018 17:11:11 +0800</pubDate>
+        <link>http://localhost:4000/blog/2018/01/24/blog-test.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/01/24/blog-test.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
@@ -28,8 +39,8 @@
 
 </description>
         <pubDate>Thu, 01 Sep 2016 18:11:11 +0800</pubDate>
-        <link>http://localhost:4000/jekyll-theme-libretto/2016/09/01/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll-theme-libretto/2016/09/01/welcome-to-jekyll.html</guid>
+        <link>http://localhost:4000/blog/2016/09/01/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/09/01/welcome-to-jekyll.html</guid>
         
         
       </item>
@@ -45,7 +56,7 @@
 &lt;p&gt;Chicken biltong ribeye, pig cupim filet mignon sausage.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;/jekyll-theme-libretto/assets/earth.jpg&quot; alt=&quot;image&quot; /&gt;
+	&lt;img src=&quot;/blog/assets/earth.jpg&quot; alt=&quot;image&quot; /&gt;
 	&lt;figcaption&gt;
 		There is nothing on this earth more to be prized than true friendship.
 	&lt;/figcaption&gt;
@@ -54,8 +65,8 @@
 &lt;p&gt;Swine brisket tongue pork cow pork loin beef ribs turkey flank rump strip steak.&lt;/p&gt;
 </description>
         <pubDate>Sat, 20 Aug 2016 18:11:11 +0800</pubDate>
-        <link>http://localhost:4000/jekyll-theme-libretto/2016/08/20/bacon-ipsum.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll-theme-libretto/2016/08/20/bacon-ipsum.html</guid>
+        <link>http://localhost:4000/blog/2016/08/20/bacon-ipsum.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2016/08/20/bacon-ipsum.html</guid>
         
         
       </item>
