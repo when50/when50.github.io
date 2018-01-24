@@ -1,6 +1,0 @@
----
-layout: post
-title:  "Mark一下blog开始发布"
-date:   2018-01-24 18:11:11 +0860
----
-Ha，终于搞定Jekyll和GitHub了，可以开始搞Blog拉，啦啦啦
