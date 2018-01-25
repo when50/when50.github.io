@@ -1,6 +1,6 @@
 title: When50's Blog
 description: > # this means to ignore newlines until "baseurl:"
-  个人生活,iOS,app,3D Game,旅行,电影
+  个人生活,iOS,app,3D Game,旅行
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://when50.github.io" # the base hostname & protocol for your site, e.g. http://example.com
