@@ -3,7 +3,6 @@ layout: post
 title: 开博：）
 date: 2018-01-25 10:38:20 +0860
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: # Add image post (optional)
 tags: [2018, life]
 ---
 来厦门1年了，收获颇多，尽管如此到现在还是没有爱上这里（才知道年龄大了乡愁会加重）。
