@@ -14,7 +14,7 @@
     <meta content="website" property="og:type">
   
   
-    <meta content="个人生活,iOS,app,3D Game
+    <meta content="个人生活,iOS,app,3D Game,旅行
 " property="og:description">
   
   
@@ -39,21 +39,21 @@
     <meta name="twitter:url" content="http://localhost:4000/">
   
   
-    <meta name="twitter:description" content="个人生活,iOS,app,3D Game
+    <meta name="twitter:description" content="个人生活,iOS,app,3D Game,旅行
 ">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/blog/assets/img/when50-boy.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/when50-boy.jpg">
   
 
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
-	<link rel="shortcut icon" href="/blog/assets/img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="/blog/assets/img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/blog/assets/img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/blog/assets/img/favicon/apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#263959">
 	<!-- Windows Phone -->
@@ -64,9 +64,9 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<!-- Font Awesome -->
-	<link rel="stylesheet" href="/blog/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
 	<!-- Styles -->
-	<link rel="stylesheet" href="/blog/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
@@ -76,7 +76,7 @@
   <header>
     <div class="about">
       <div class="cover-author-image">
-        <a href="/blog/"><img src="/blog/assets/img/when50-boy.jpg" alt="When50"></a>
+        <a href="/"><img src="/assets/img/when50-boy.jpg" alt="When50"></a>
       </div>
       <div class="author-name">When50</div>
       <p>85前互联网老兵，旅居厦门，现供职于美图，开发过数款iOS App。</p>
@@ -114,13 +114,8 @@
   
   
   <div class="post-content">
-    <h2 class="post-title"><a href="/blog/first-blog/">开博：）</a></h2>
-    <p>来厦门1年了，收获颇多，尽管如此到现在还是没有爱上这里（才知道年龄大了乡愁会加重）。
-
-2017年发生了太多事，被雾霾的灰色恐怖迫离北京，没想到雾霾还真的轻了不少，虽然推测是气候起了绝对作用，但是也感到了人们治理雾霾的努力，无论怎样我也希望北京越变越好。离开在老东家混日子的舒适区，到了厦门重新开始，感受着这里人们的勤劳智慧，作为老兵还是有些压力，还好我是打不到的小强。
-
-开始品尝到了人到中年的滋味，像咖啡，还是不加糖的那种，闻着喝着都没那么舒服，回味还不错。
-</p>
+    <h2 class="post-title"><a href="/reswift-practice/">ReSwift最佳实践</a></h2>
+    <p>接触单向数据流是看了喵神的“单向数据流动的函数式 View Controller”一文,觉得这个架构太酷了，随即科普（搜索）了下，就和ReSwift开始了第一次亲密接触，因为觉得思想和框架比较简单、组件代码赞也比较多，就立即就开始了实践，后来为轻率付出了不大不小的代价。哗哗哗，开始撸代码，搞定收工。哔哔哔！QA的同学反馈用了ReSwift的几个界面都有内存泄露。认真负责的把代码看了好几遍，觉得不是我代码的问题，好在泄露并不严重没有什么可怕的后果，又到了交付时间点只好带着先上了。 后面的需求一波接一波，上线后也确实没有增加用户崩溃数，所以这个事就先放下了，但是如鲠在喉的感觉…终于熬到了这个版本，手上的需求不多很快就开发完了，可以腾出手来解决可恶的问题了。翻了无数论坛，似乎大家并没有遇到这个问题，只好去参考Demo，突然发现自己犯了一个初学者的错误，在每个View Controller对象当中都持有了一个Store和一个State，这只能出现在Demo当中的代码被我放倒项目中了！这里其实需要说明一下：对于同一个界面，不管是列表页、详情页等等，都可以对应到一个独一无二的State上，因为只有用户可以看到和交互的界面才会订阅Store当中的State，试想一下每个详情页，本来布局相同，仅仅是数据不同，如果都对应到不同的Store和State那就不存在重用了！并且还有一点，State和Store的存在应该完全和View Controller无关，因为State和Store才是业务，View Controller仅仅是显示数据并接受用户交互。这里的内存泄露黑手也就浮现出来了：View Controller -&gt; Store -&gt; Subscriber(即View Controller)。 理清了问题解决就有办法了，把Store和State从View Controller中独立出来，每个界面在显示前初始化（恢复：界面不是刚刚创建就需要恢复）State，并订阅Store。其实我觉得ReSwift应该抽象一层State的serialization...</p>
     <span class="post-date">2018, Jan 25&nbsp;&nbsp;&nbsp;—&nbsp;</span>
     <span class="post-words">1 minute read</span>
   </div>
@@ -128,71 +123,16 @@
 
 <article class="post">
   
-    <a class="post-thumbnail" style="background-image: url(/blog/assets/img/i-rest.jpg)" href="/blog/how-i-rest-from-work/"></a>
   
   <div class="post-content">
-    <h2 class="post-title"><a href="/blog/how-i-rest-from-work/">How I Rest From Work</a></h2>
-    <p>Fam locavore snackwave bushwick +1 sartorial. Selfies portland knausgaard synth. Pop-up art party marfa deep...</p>
-    <span class="post-date">2017, Sep 12&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">4 minute read</span>
-  </div>
-</article>
+    <h2 class="post-title"><a href="/first-blog/">开博：）</a></h2>
+    <p>来厦门1年了，收获颇多，尽管如此到现在还是没有爱上这里（才知道年龄大了乡愁会加重）。
 
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/blog/assets/img/software.jpg)" href="/blog/the-best-organizer-software/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/blog/the-best-organizer-software/">The Best Organizer Software</a></h2>
-    <p>Church-key blog messenger bag, selfies umami man braid mlkshk. Pork belly cornhole meditation tumblr meh...</p>
-    <span class="post-date">2017, Sep 12&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">3 minute read</span>
-  </div>
-</article>
+2017年发生了太多事，被雾霾的灰色恐怖迫离北京，没想到雾霾还真的轻了不少，虽然推测是气候起了绝对作用，但是也感到了人们治理雾霾的努力，无论怎样我也希望北京越变越好。离开在老东家混日子的舒适区，到了厦门重新开始，感受着这里人们的勤劳智慧，作为老兵还是有些压力，还好我是打不到的小强。
 
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/blog/assets/img/how-to-start.jpg)" href="/blog/how-to-start-programming/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/blog/how-to-start-programming/">How To Start Programming</a></h2>
-    <p>Post-ironic jean shorts bushwick umami, synth beard austin hell of meh kitsch distillery sustainable plaid...</p>
-    <span class="post-date">2017, Sep 12&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">3 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/blog/assets/img/workflow.jpg)" href="/blog/10-tips-to-improve-your-workflow/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/blog/10-tips-to-improve-your-workflow/">10 Tips To Improve Your Workflow</a></h2>
-    <p>Asymmetrical portland enamel pin af heirloom ramps authentic thundercats. Synth truffaut schlitz aesthetic, palo santo...</p>
-    <span class="post-date">2017, Sep 12&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">5 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/blog/assets/img/js-1.png)" href="/blog/conference-on-javascript/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/blog/conference-on-javascript/">Conference on Javascript</a></h2>
-    <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
-    <span class="post-date">2017, Sep 10&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">2 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/blog/welcome-to-jekyll/">Welcome to Jekyll!</a></h2>
-    <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build...</p>
-    <span class="post-date">2017, Apr 06&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+开始品尝到了人到中年的滋味，像咖啡，还是不加糖的那种，闻着喝着都没那么舒服，回味还不错。
+</p>
+    <span class="post-date">2018, Jan 25&nbsp;&nbsp;&nbsp;—&nbsp;</span>
     <span class="post-words">1 minute read</span>
   </div>
 </article>
