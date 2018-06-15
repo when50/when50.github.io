@@ -1,0 +1,14 @@
+---
+layout: post
+title: 我的第一个3D游戏BallEscaping
+date: 2018-06-15 17:03:20 +0800
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+tags: [SceneKit, 3D, Game, Voxel]
+---
+&emsp;&emsp;Ballescaping上线了（6月7日）！不过推广上有很大困难，靠自己手动在社区里打打广告还是增加不了几个曝光。联系了Ketchapp，看看会不会有机会（没抱很大希望）。这个游戏做出来给了自己很多启发，譬如aso优化方面的，还有一些技术点和传播点的，目前看来这些经验应该都算作回报吧：），截止到现在，一共5个安装，有点惨淡。一个app想要在app store里脱颖而出还是相当的需要运气。
+
+&emsp;&emsp;接下来准备开发一款动作游戏了，会引入一些新技术（比如Voxel）；同时减少对美术部分的一些依赖（希望自己的配色能有提高）；一定要把Ballsescaping的一些经验运用上，力争每款游戏安装量都超越上一个。正赶上端午节有个假期，有几天闲暇，突击一波把基础的东西搭建一下。争取这个作品的开发周期也做缩短。预告一下：这个游戏依然不会插入广告，顶多增加一个内部推荐通道。
+
+&emsp;&emsp;农药已经戒了，偶尔看看直播过过瘾，实在有点浪费时间。
+
+PS：Ballsescaping原来的计划是收回成本，现在看来这点要求也貌似是高了：p。如果你能看到本文，请支持一下作者，到app store去下载一个Ballsescaping玩一玩: https://itunes.apple.com/us/app/ballsescaping/id1376418023?mt=8
