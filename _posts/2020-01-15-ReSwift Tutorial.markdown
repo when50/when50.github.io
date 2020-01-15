@@ -892,14 +892,14 @@ store.dispatch(FlipCardAction(cardIndexToFlip: IndexPath.row))
 
 还有好多学习ReSwift的资源。
 
-* **Middleware**：当前Swift中没有一个处理交叉关注的好方法。在ReSwift中，你可以免费得到！使用ReSwift的[Middleware][5]功能，你可以实现各种各样的关注。它让我们可以方便的在行为中包装关注（日志，统计，缓存）。
+* **Middleware**：当前Swift中没有一个处理[交叉关注][6]的好方法。在ReSwift中，你可以免费得到！使用ReSwift的[Middleware][7]功能，你可以实现各种各样的关注。它让我们可以方便的在行为中包装关注（日志，统计，缓存）。
 * **Routing**：我们为MemoryTunes应用实现了自己的路由。其实可以利用[ReSwift-Router][6]这种更通用的路由。它仍然有开放的问题，或许你可以参与解决呢？
 * **Testing**：ReSwift对于测试大概是最简单的框架。Reducers包含了所有需要测试的代码，并且它们都是纯函数式的。纯函数对于相同输入总是产生相同的结果，不依赖app状态也没有副作用。
 * **Debugging**：ReSwift的状态是单向数据流下的一个结构，调试起来非常容易。我们可以记录每步的状态直到崩溃。
 * **Persistence**：因为app全部状态存在一个地方，可以很容的序列化和持久化。缓存离线内容是个架构性的问题，但在ReSwift中不存在，这基本上没有代价。
-* **Other Implementations**：
+* **Other Implementations**：[Katana][10], [ReduxKit][11]
 
-
+* **还有一些学习链接**：[ReSwift talk][12] [ReSwift Repo][13] [Christian TieTze's Blog][14]
 
 
 
@@ -910,8 +910,15 @@ store.dispatch(FlipCardAction(cardIndexToFlip: IndexPath.row))
 [4]: https://github.com/onevcat/Kingfisher "Kingfisher"
 
 [5]: https://www.raywenderlich.com/516-reswift-tutorial-memory-game-app "ReSwift tutorial"
-
-
+[6]: https://en.wikipedia.org/wiki/Cross-cutting_concern "cross-cutting concern"
+[7]: https://reswift.github.io/ReSwift/master/getting-started-guide.html#middleware "middleware"
+[8]: https://github.com/ReSwift/ReSwift-Router "Router"
+[9]: https://github.com/ReSwift/ReSwift-Recorder "Recorder"
+[10]: https://github.com/BendingSpoons/katana-swift "katana-swift"
+[11]: https://github.com/ReduxKit/ReduxKit "ReduxKit"
+[12]: https://realm.io/news/benji-encz-unidirectional-data-flow-swift/ "ReSwift talk"
+[13]: https://github.com/ReSwift/ReSwift "ReSwift Repo"
+[14]: http://christiantietze.de/posts/2016/01/reswift-level-indirection/ "Christian TieTze's Blog"
 
 
 
