@@ -1,6 +1,6 @@
-title: When50's Blog
+title: 老北日记
 description: > # this means to ignore newlines until "baseurl:"
-  个人生活,iOS,app,3D Game,旅行
+  个人生活,iOS,app,3D Game,旅行,读书
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://when50.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -9,7 +9,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: When50 # add your name
 author-img: when50-boy.jpg # add your photo
-about-author: 85前互联网老兵，旅居厦门，现供职于美图，开发过数款iOS App。 # add description
+about-author: 北京人，朝阳群众，iOS、Flutter开发者。 # add description
 twitter: when50 # add your Twitter handle
 facebook: when50 # add your Facebook handle
 github: when50 # add your Github handle
